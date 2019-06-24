@@ -1,2 +1,2 @@
 # DLHub
-Deep Learning Hub
+Deep Learning Hub (Python 3.6.6)
