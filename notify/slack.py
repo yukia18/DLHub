@@ -1,28 +1,18 @@
 import slackweb
 
 
-def slack_notify(name, validation, score, description=''):
+def slack_notify(message):
     """
     Send notification to slack channel.
     - `pip install slackweb`
     - URL should be set by incoming webhook.
-        
-    e.g. Validation method list,
-    (1) holdout: train_test_split(test_size=0.2, random_state=42, shuffle=True)
-    
+
     Args:
-        name (str): your name.
-        score (float): best score.
-        validation (str): validation method (such as 'holdout' or 'kfold').
-        descriptions (str): free form descriptions. Default to ''.
+        message (str): message.
 
     """
-    URL = "<Incoming Webhook>"
-    slack = slackweb.Slack(url=URL)
+    # Don't forget to disable token
+    url = "<Incoming Webhook>"
 
-    message = '[Sent by {}]\n'.format(name)
-    message += 'Score: {} - {:.5f}\n'.format(validation, score)
-    message += 'Descriptions: {}'.format(descriptions)
-
+    slack = slackweb.Slack(url=url)
     slack.notify(text=message)
-

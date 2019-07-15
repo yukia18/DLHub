@@ -105,3 +105,6 @@ venv.bak/
 
 # vscode
 .vscode/
+
+# private settings
+notify/tokens.json
