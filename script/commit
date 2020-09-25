@@ -1,0 +1,3 @@
+#!/bin/sh
+
+jupyter nbconvert --to notebook --ExecutePreprocessor.timeout=-1 --execute --inplace $1

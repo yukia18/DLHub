@@ -1,0 +1,10 @@
+#!/bin/sh
+
+VALUE_N=".comment"
+while getopts n: OPT; do
+    case $OPT in
+        n ) VALUE_N=$OPTARG ;;
+    esac
+done
+
+find . -type f -name $VALUE_N | xargs grep ""
